@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Sitemap: https://mohamedkhaled-marketing.com/sitemap.xml
+
+# Optional: Block common bot paths if needed
+# Disallow: /admin/
+# Disallow: /private/

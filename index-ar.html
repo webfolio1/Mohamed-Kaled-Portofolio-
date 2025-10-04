@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Primary SEO -->
+    <title>محمد خالد – أخصائي التسويق الرقمي (ووردبريس، سوشيال ميديا، محتوى، SEO) | الجيزة، مصر</title>
+    <meta name="description" content="أخصائي تسويق رقمي في الجيزة، مصر. أساعد العلامات التجارية على النمو من خلال إدارة محتوى ووردبريس، استراتيجية السوشيال ميديا (LinkedIn/Meta)، حملات مدفوعة بالبيانات، وSEO. إنجازات حديثة: +25% متابعين، +30% تفاعل." />
+
+    <!-- Canonical + robots -->
+    <link rel="canonical" href="https://mohamedkhaled-marketing.com/index-ar.html" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="محمد خالد – أخصائي التسويق الرقمي" />
+    <meta property="og:description" content="محتوى ووردبريس، استراتيجية السوشيال ميديا، نمو مدفوع بالمؤشرات. +25% متابعين، +30% تفاعل." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mohamedkhaled-marketing.com/index-ar.html" />
+    <meta property="og:image" content="https://mohamedkhaled-marketing.com/hero.jpg" />
+    <meta property="og:locale" content="ar_EG" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="محمد خالد – أخصائي التسويق الرقمي" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #3b82f6;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #e8f0fe;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            padding: 0.6rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            transform: translateY(0);
+        }
+
+        nav.scrolled {
+            padding: 0.3rem 0;
+        }
+
+        nav.hidden {
+            transform: translateY(-100%);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .lang-btn {
+            padding: 0.5rem 1rem;
+            background: var(--gradient);
+            color: var(--white) !important;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+            color: var(--white) !important;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-dark);
+            transition: all 0.3s ease;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--gradient);
+            padding: 2rem;
+            margin-top: 70px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            top: -100px;
+            left: -100px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            text-align: center;
+            color: var(--white);
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero h2 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.85;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--white);
+            color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--primary-color);
+        }
+
+        .social-hero {
+            margin-top: 2rem;
+        }
+
+        .linkedin-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: var(--white);
+            color: var(--primary-color);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .linkedin-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 0;
+        }
+
+        #about {
+            background: var(--white);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--text-dark);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .about-text p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-image img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+
+        /* Achievements */
+        #achievements {
+            background: var(--white);
+        }
+
+        .achievement-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .achievement-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+
+        .achievement-content h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .achievement-content p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: var(--gradient);
+            color: var(--white);
+            border-radius: 50px;
+            font-weight: 600;
+            margin: 0.5rem;
+        }
+
+        /* Services */
+        #services {
+            background: var(--bg-light);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2.5rem;
+            color: var(--white);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+            animation: floatingIcon 4s ease-in-out infinite;
+        }
+
+        @keyframes floatingIcon {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-10px) rotate(5deg);
+            }
+        }
+
+        .service-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+            justify-content: center;
+        }
+
+        .feature-tag {
+            display: inline-block;
+            padding: 0.4rem 0.8rem;
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            border: 1px solid var(--primary-color);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .feature-tag:hover {
+            background: var(--gradient);
+            color: var(--white);
+            transform: scale(1.05);
+        }
+
+        /* Portfolio */
+        #portfolio {
+            background: var(--white);
+        }
+
+        /* View Toggle Buttons */
+        .view-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .view-btn {
+            padding: 0.8rem 2rem;
+            border: 2px solid var(--primary-color);
+            background: transparent;
+            color: var(--primary-color);
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .view-btn:hover {
+            background: var(--primary-color);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+        }
+
+        .view-btn.active {
+            background: var(--gradient);
+            color: var(--white);
+            border-color: transparent;
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Style 2: Card View */
+        .portfolio-cards {
+            display: none;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .portfolio-cards.active {
+            display: grid;
+        }
+
+        .portfolio-card-item {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .portfolio-card-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(37, 99, 235, 0.2);
+            border-color: var(--primary-color);
+        }
+
+        .portfolio-card-header {
+            background: var(--gradient);
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .portfolio-card-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: floatingIcon 3s ease-in-out infinite;
+        }
+
+        .portfolio-card-header h3 {
+            font-size: 1.4rem;
+            margin: 0;
+            color: var(--white);
+        }
+
+        .portfolio-card-body {
+            padding: 2rem 1.5rem;
+        }
+
+        .portfolio-card-body p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .portfolio-card-stats {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: #f8f9ff;
+            border-radius: 10px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .portfolio-card-link {
+            display: block;
+            text-align: center;
+            padding: 1rem;
+            background: var(--gradient);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .portfolio-card-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+        }
+
+        /* Style 3: Slider View */
+        .portfolio-slider {
+            display: none;
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .portfolio-slider.active {
+            display: block;
+        }
+
+        .slider-wrapper {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slider-item {
+            min-width: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            color: var(--white);
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .slider-icon {
+            font-size: 5rem;
+            margin-bottom: 1.5rem;
+            animation: floatingIcon 4s ease-in-out infinite;
+        }
+
+        .slider-item h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+
+        .slider-item p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .slider-link {
+            display: inline-block;
+            padding: 1rem 3rem;
+            background: var(--white);
+            color: var(--primary-color);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .slider-link:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 20px rgba(255,255,255,0.3);
+        }
+
+        .slider-controls {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .slider-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--white);
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slider-btn:hover {
+            background: var(--primary-color);
+            color: var(--white);
+            transform: scale(1.1);
+        }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            margin-top: 1.5rem;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ddd;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background: var(--primary-color);
+            transform: scale(1.3);
+        }
+
+        .portfolio-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            display: block;
+            text-decoration: none;
+        }
+
+        .portfolio-item:hover {
+            transform: scale(1.02);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .portfolio-image {
+            width: 100%;
+            height: 300px;
+            background: var(--gradient);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 2.5rem;
+            font-weight: bold;
+            gap: 1rem;
+            position: relative;
+        }
+
+        .portfolio-image-icon {
+            font-size: 4rem;
+            opacity: 0.9;
+        }
+
+        .portfolio-image-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(37, 99, 235, 0.95);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
+        .portfolio-overlay h3 {
+            color: var(--white);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .portfolio-overlay p {
+            color: var(--white);
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .show-project-btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: var(--white);
+            color: var(--primary-color);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .show-project-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        /* Contact */
+        #contact {
+            background: var(--bg-light);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        input, textarea {
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                flex-direction: column;
+                background: var(--white);
+                width: 100%;
+                padding: 2rem;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                transition: right 0.3s ease;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-content,
+            .achievement-container,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio-grid,
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">محمد خالد</a>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#about">عني</a></li>
+                <li><a href="#achievements">الإنجازات</a></li>
+                <li><a href="#services">الخدمات</a></li>
+                <li><a href="#portfolio">الأعمال</a></li>
+                <li><a href="#contact">تواصل معي</a></li>
+                <li><a href="index.html" class="lang-btn" title="English Version">English</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="home">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>محمد خالد</h1>
+                <h2>أخصائي التسويق الرقمي في مصر</h2>
+                <p>إبداع + مؤشرات أداء: محتوى يلامس القلوب، حملات تحقق النتائج. متخصص في إدارة محتوى ووردبريس، استراتيجية نمو LinkedIn، التسويق عبر السوشيال ميديا، واستراتيجية محتوى SEO. أحوّل الأفكار إلى قصص جذابة ونمو قابل للقياس.</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">تواصل معي</a>
+                    <a href="#portfolio" class="btn btn-secondary">شاهد أعمالي</a>
+                    <a href="Mohamed Khaled CV.pdf" class="btn btn-primary" download>تحميل السيرة الذاتية</a>
+                </div>
+                <div class="social-hero">
+                    <a href="https://www.linkedin.com/in/mohamedkh-marketing" target="_blank" rel="noopener noreferrer" class="linkedin-btn" aria-label="LinkedIn Profile">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
+                <h2 class="section-title">عني</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>أخصائي تسويق رقمي شغوف</h3>
+                        <p>أنا محمد خالد محمد يوسف، أخصائي تسويق رقمي من الجيزة، مصر، متخصص في إنشاء حملات مدفوعة بالبيانات تحقق نتائج قابلة للقياس.</p>
+                        <p>مع خبرة في إدارة محتوى ووردبريس، استراتيجية السوشيال ميديا، وتحسين محركات البحث، أساعد العلامات التجارية على تحقيق أهداف التسويق الرقمي من خلال محتوى استراتيجي وحملات جذابة.</p>
+                        <p><strong>الإنجازات الرئيسية:</strong> +25% نمو المتابعين، +30% تحسين التفاعل، إدارة 3-4 مواقع ووردبريس في وقت واحد.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="hero.jpg" alt="محمد خالد - أخصائي التسويق الرقمي" width="400" height="400" loading="lazy" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements">
+            <div class="container">
+                <h2 class="section-title">الإنجازات والجوائز</h2>
+                <div class="achievement-container">
+                    <div class="achievement-image">
+                        <img src="7J5A8266[1].JPG" alt="جائزة من مبادرة مصر الرقمية ووزارة الاتصالات وتكنولوجيا المعلومات" width="600" height="400" loading="lazy" />
+                    </div>
+                    <div class="achievement-content">
+                        <h3>تقدير من وزارة الاتصالات وتكنولوجيا المعلومات</h3>
+                        <p>حصلت على تقدير رسمي من مبادرة مصر الرقمية (DEPI) ووزارة الاتصالات وتكنولوجيا المعلومات لمساهمتي المتميزة في مجال التسويق الرقمي والعمل الجماعي الاستثنائي.</p>
+                        <p>هذا الإنجاز يعكس التزامي بالتميز في استراتيجيات التسويق الرقمي والتأثير الإيجابي على المشاريع الوطنية.</p>
+                        <div class="achievement-badges">
+                            <span class="badge">✨ تقدير وزاري</span>
+                            <span class="badge">🏆 مبادرة DEPI</span>
+                            <span class="badge">🇪🇬 مساهمة وطنية</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
+            <div class="container">
+                <h2 class="section-title">خدماتي</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">📱</div>
+                        <h3>إدارة السوشيال ميديا</h3>
+                        <p>استراتيجيات محتوى شاملة عبر LinkedIn وFacebook وInstagram. أحقق +25% نمو في المتابعين من خلال التخطيط الاستراتيجي والمشاركة المجتمعية.</p>
+                        <div class="service-features">
+                            <span class="feature-tag">💼 خبير LinkedIn</span>
+                            <span class="feature-tag">📊 +25% نمو</span>
+                            <span class="feature-tag">🎯 مستهدف</span>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🌐</div>
+                        <h3>تطوير وإدارة ووردبريس</h3>
+                        <p>خبرة في بناء مواقع ووردبريس من الصفر، الترحيل، وإدارة 3-4 مواقع في وقت واحد. محتوى محسّن لمحركات البحث وتحديثات منتظمة.</p>
+                        <div class="service-features">
+                            <span class="feature-tag">⚡ نشر سريع</span>
+                            <span class="feature-tag">🔍 محسن SEO</span>
+                            <span class="feature-tag">📈 تحليلات</span>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">✍️</div>
+                        <h3>كتابة المحتوى وصناعته</h3>
+                        <p>إنشاء محتوى جذاب عبر صيغ متعددة: مقالات، منشورات سوشيال ميديا، محتوى طبي، ومحتوى صوتي بالذكاء الاصطناعي. أكثر من 200 قطعة محتوى تم إنتاجها.</p>
+                        <div class="service-features">
+                            <span class="feature-tag">📝 +200 مقال</span>
+                            <span class="feature-tag">🎭 سرد القصص</span>
+                            <span class="feature-tag">💡 إبداعي</span>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">�</div>
+                        <h3>تحسين محركات البحث (SEO)</h3>
+                        <p>تحسين محتوى الموقع لمحركات البحث. البحث عن الكلمات المفتاحية، التحسين على الصفحة، والتحليلات لتحسين رؤية الموقع.</p>
+                        <div class="service-features">
+                            <span class="feature-tag">🚀 تعزيز SEO</span>
+                            <span class="feature-tag">📋 بحث الكلمات</span>
+                            <span class="feature-tag">🤖 أتمتة</span>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">�</div>
+                        <h3>حملات رقمية</h3>
+                        <p>حملات تسويقية مدفوعة بالمؤشرات من الفكرة إلى التنفيذ. تتبع الأداء، تحليلات، وتحسين مستمر لنتائج أفضل.</p>
+                        <div class="service-features">
+                            <span class="feature-tag">📈 مؤشرات KPI</span>
+                            <span class="feature-tag">💹 تتبع ROI</span>
+                            <span class="feature-tag">🔬 قائم على البيانات</span>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🎨</div>
+                        <h3>تصميم المحتوى البصري</h3>
+                        <p>إنشاء رسومات جذابة ومواد تسويقية باستخدام Canva وأدوات التصميم لمنصات السوشيال ميديا والويب.</p>
+                        <div class="service-features">
+                            <span class="feature-tag">🖼️ جرافيكس</span>
+                            <span class="feature-tag">🎬 مونتاج فيديو</span>
+                            <span class="feature-tag">✨ هوية بصرية</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio">
+            <div class="container">
+                <h2 class="section-title">فئات أعمالي</h2>
+                <p style="text-align: center; max-width: 700px; margin: 0 auto 2rem; color: var(--text-light); font-size: 1.1rem;">استكشف أعمالي في ثلاث مجالات رئيسية من خبرتي في التسويق الرقمي</p>
+                
+                <!-- أزرار تبديل العرض -->
+                <div class="view-toggle">
+                    <button class="view-btn active" onclick="changeView('grid')" id="gridViewBtn">
+                        <span>🔲</span> عرض الشبكة
+                    </button>
+                    <button class="view-btn" onclick="changeView('cards')" id="cardsViewBtn">
+                        <span>🃏</span> عرض البطاقات
+                    </button>
+                    <button class="view-btn" onclick="changeView('slider')" id="sliderViewBtn">
+                        <span>🎬</span> عرض السلايدر
+                    </button>
+                </div>
+
+                <!-- النمط 1: عرض الشبكة (الافتراضي) -->
+                <div class="portfolio-grid" id="gridView">
+                    <a href="category-social-media.html" class="portfolio-item">
+                        <div class="portfolio-image">
+                            <div class="portfolio-image-icon">📱</div>
+                            <div class="portfolio-image-title">السوشيال ميديا واستراتيجية المحتوى</div>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <h3>السوشيال ميديا واستراتيجية المحتوى</h3>
+                            <p>حملات نمو LinkedIn، تسويق المطاعم، إنتاج سلاسل فيديو، وإدارة السوشيال ميديا بنمو +25%</p>
+                            <span class="show-project-btn">عرض المشروع</span>
+                        </div>
+                    </a>
+                    <a href="category-wordpress.html" class="portfolio-item">
+                        <div class="portfolio-image">
+                            <div class="portfolio-image-icon">🌐</div>
+                            <div class="portfolio-image-title">تطوير وإدارة ووردبريس</div>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <h3>تطوير وإدارة ووردبريس</h3>
+                            <p>حلول ووردبريس كاملة بما في ذلك الترحيل، إدارة مواقع متعددة (3-4 مواقع)، ونشر المحتوى بنسبة تشغيل 99.9%</p>
+                            <span class="show-project-btn">عرض المشروع</span>
+                        </div>
+                    </a>
+                    <a href="category-content-creation.html" class="portfolio-item">
+                        <div class="portfolio-image">
+                            <div class="portfolio-image-icon">✍️</div>
+                            <div class="portfolio-image-title">إنشاء وإنتاج المحتوى</div>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <h3>إنشاء وإنتاج المحتوى</h3>
+                            <p>محتوى احترافي بصيغ متعددة: إدارة محتوى طبي، مقالات صوتية بالذكاء الاصطناعي، كتابة نصوص، ومقالات محسنة لمحركات البحث (أكثر من 200 قطعة)</p>
+                            <span class="show-project-btn">عرض المشروع</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- النمط 2: عرض البطاقات -->
+                <div class="portfolio-cards" id="cardsView">
+                    <div class="portfolio-card-item">
+                        <div class="portfolio-card-header">
+                            <div class="portfolio-card-icon">📱</div>
+                            <h3>استراتيجية السوشيال ميديا</h3>
+                        </div>
+                        <div class="portfolio-card-body">
+                            <p>حملات نمو LinkedIn، تسويق المطاعم، إنتاج سلاسل فيديو، وإدارة السوشيال ميديا بنتائج قابلة للقياس.</p>
+                            <div class="portfolio-card-stats">
+                                <div class="stat-item">
+                                    <span class="stat-number">+25%</span>
+                                    <span class="stat-label">نمو</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">15+</span>
+                                    <span class="stat-label">حملة</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">5</span>
+                                    <span class="stat-label">مشاريع</span>
+                                </div>
+                            </div>
+                            <a href="category-social-media.html" class="portfolio-card-link">عرض المشاريع ←</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-card-item">
+                        <div class="portfolio-card-header">
+                            <div class="portfolio-card-icon">🌐</div>
+                            <h3>حلول ووردبريس</h3>
+                        </div>
+                        <div class="portfolio-card-body">
+                            <p>حلول ووردبريس كاملة بما في ذلك الترحيل، إدارة مواقع متعددة (3-4 مواقع)، ونشر المحتوى بنسبة تشغيل ممتازة.</p>
+                            <div class="portfolio-card-stats">
+                                <div class="stat-item">
+                                    <span class="stat-number">99.9%</span>
+                                    <span class="stat-label">تشغيل</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">10+</span>
+                                    <span class="stat-label">مواقع</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">3</span>
+                                    <span class="stat-label">مشاريع</span>
+                                </div>
+                            </div>
+                            <a href="category-wordpress.html" class="portfolio-card-link">عرض المشاريع ←</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-card-item">
+                        <div class="portfolio-card-header">
+                            <div class="portfolio-card-icon">✍️</div>
+                            <h3>إنتاج المحتوى</h3>
+                        </div>
+                        <div class="portfolio-card-body">
+                            <p>محتوى احترافي بصيغ متعددة: محتوى طبي، مقالات صوتية بالذكاء الاصطناعي، كتابة نصوص، ومقالات محسنة لمحركات البحث.</p>
+                            <div class="portfolio-card-stats">
+                                <div class="stat-item">
+                                    <span class="stat-number">200+</span>
+                                    <span class="stat-label">مقالة</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">6</span>
+                                    <span class="stat-label">صيغ</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">4</span>
+                                    <span class="stat-label">مشاريع</span>
+                                </div>
+                            </div>
+                            <a href="category-content-creation.html" class="portfolio-card-link">عرض المشاريع ←</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- النمط 3: عرض السلايدر -->
+                <div class="portfolio-slider" id="sliderView">
+                    <div class="slider-wrapper" id="sliderWrapper">
+                        <div class="slider-item">
+                            <div class="slider-icon">📱</div>
+                            <h3>السوشيال ميديا واستراتيجية المحتوى</h3>
+                            <p>حملات نمو LinkedIn، تسويق المطاعم، إنتاج سلاسل فيديو، وإدارة السوشيال ميديا بتحقيق نمو +25% في المتابعين وزيادة +30% في التفاعل خلال 6 أشهر من خلال التخطيط الاستراتيجي والتنفيذ المبني على المؤشرات.</p>
+                            <a href="category-social-media.html" class="slider-link">استكشف المشاريع ←</a>
+                        </div>
+                        <div class="slider-item">
+                            <div class="slider-icon">🌐</div>
+                            <h3>تطوير وإدارة ووردبريس</h3>
+                            <p>حلول ووردبريس كاملة بما في ذلك الترحيل، إدارة مواقع متعددة (3-4 مواقع في وقت واحد)، ونشر المحتوى بنسبة تشغيل 99.9%. خبير في تخصيص ووردبريس، تحسين محركات البحث، وتعزيز الأداء.</p>
+                            <a href="category-wordpress.html" class="slider-link">استكشف المشاريع ←</a>
+                        </div>
+                        <div class="slider-item">
+                            <div class="slider-icon">✍️</div>
+                            <h3>إنشاء وإنتاج المحتوى</h3>
+                            <p>محتوى احترافي بصيغ متعددة بما في ذلك إدارة المحتوى الطبي، مقالات صوتية بالذكاء الاصطناعي، كتابة نصوص، ومقالات محسنة لمحركات البحث. أكثر من 200 قطعة محتوى تم إنتاجها مع التركيز على الجودة والتفاعل.</p>
+                            <a href="category-content-creation.html" class="slider-link">استكشف المشاريع ←</a>
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <button class="slider-btn" onclick="previousSlide()">‹</button>
+                        <button class="slider-btn" onclick="nextSlide()">›</button>
+                    </div>
+                    <div class="slider-dots">
+                        <span class="dot active" onclick="goToSlide(0)"></span>
+                        <span class="dot" onclick="goToSlide(1)"></span>
+                        <span class="dot" onclick="goToSlide(2)"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <h2 class="section-title">تواصل معي</h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <h3>البريد الإلكتروني</h3>
+                                <p>mohamedkhaledyousef89@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📱</div>
+                            <div>
+                                <h3>الهاتف</h3>
+                                <p dir="ltr">+20 115 230 9852</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h3>الموقع</h3>
+                                <p>الجيزة، مصر</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">💼</div>
+                            <div>
+                                <h3>لينكد إن</h3>
+                                <p><a href="https://www.linkedin.com/in/mohamedkh-marketing" target="_blank" style="color: var(--primary-color);">linkedin.com/in/mohamedkh-marketing</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <form id="contactForm">
+                        <input type="text" id="name" placeholder="الاسم *" required />
+                        <input type="email" id="email" placeholder="البريد الإلكتروني *" required />
+                        <textarea id="message" placeholder="رسالتك *" required></textarea>
+                        <button type="submit" class="btn btn-primary">إرسال الرسالة</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 محمد خالد محمد يوسف. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script defer>
+        // Portfolio View Switcher
+        let currentSlide = 0;
+        const totalSlides = 3;
+
+        function changeView(viewType) {
+            // Hide all views
+            document.getElementById('gridView').style.display = 'none';
+            document.getElementById('cardsView').classList.remove('active');
+            document.getElementById('sliderView').classList.remove('active');
+            
+            // Remove active class from all buttons
+            document.getElementById('gridViewBtn').classList.remove('active');
+            document.getElementById('cardsViewBtn').classList.remove('active');
+            document.getElementById('sliderViewBtn').classList.remove('active');
+            
+            // Show selected view and activate button
+            if (viewType === 'grid') {
+                document.getElementById('gridView').style.display = 'grid';
+                document.getElementById('gridViewBtn').classList.add('active');
+            } else if (viewType === 'cards') {
+                document.getElementById('cardsView').classList.add('active');
+                document.getElementById('cardsViewBtn').classList.add('active');
+            } else if (viewType === 'slider') {
+                document.getElementById('sliderView').classList.add('active');
+                document.getElementById('sliderViewBtn').classList.add('active');
+            }
+        }
+
+        function updateSlider() {
+            const wrapper = document.getElementById('sliderWrapper');
+            wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            // Update dots
+            document.querySelectorAll('.dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+        }
+
+        function previousSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlider();
+        }
+
+        // Auto-play slider (optional)
+        let autoPlayInterval;
+        function startAutoPlay() {
+            autoPlayInterval = setInterval(nextSlide, 5000);
+        }
+
+        function stopAutoPlay() {
+            clearInterval(autoPlayInterval);
+        }
+
+        // Start auto-play when slider is active
+        document.getElementById('sliderViewBtn').addEventListener('click', () => {
+            setTimeout(startAutoPlay, 100);
+        });
+
+        // Stop auto-play when switching views
+        document.getElementById('gridViewBtn').addEventListener('click', stopAutoPlay);
+        document.getElementById('cardsViewBtn').addEventListener('click', stopAutoPlay);
+
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar scroll effect with hide on scroll down
+        const navbar = document.getElementById('navbar');
+        let lastScrollTop = 0;
+        
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            // Add scrolled class for styling
+            if (scrollTop > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+            
+            // Hide navbar when scrolling down, show when scrolling up
+            if (scrollTop > lastScrollTop && scrollTop > 200) {
+                // Scrolling down & past threshold
+                navbar.classList.add('hidden');
+            } else {
+                // Scrolling up
+                navbar.classList.remove('hidden');
+            }
+            
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        }, false);
+
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            
+            alert(`شكراً ${name}! تم استلام رسالتك. سأتواصل معك قريباً على ${email}.`);
+            
+            contactForm.reset();
+        });
+    </script>
+</body>
+</html>
