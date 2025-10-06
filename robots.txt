@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Sitemap: https://mohamedkhaled-marketing.com/sitemap.xml
+Sitemap: https://webfolio1.github.io/Mohamed-Kaled-Portofolio-/sitemap.xml
 
 # Optional: Block common bot paths if needed
 # Disallow: /admin/
